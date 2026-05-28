@@ -15,7 +15,7 @@ order_details (order_details_id, order_id, order_date, order_time, item_id)
 
 
 ## Questions Explored
- 
+
 | # | Business Question | Technique |
 |---|---|---|
 | 1 | How many order lines have a missing item ID? | Aggregation |
@@ -52,7 +52,7 @@ order_details (order_details_id, order_id, order_date, order_time, item_id)
 
 
 ## Tools Used
- 
+
 `pgAdmin 4` `PostgreSQL 18`
 
 
