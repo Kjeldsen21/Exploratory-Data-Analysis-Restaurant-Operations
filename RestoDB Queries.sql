@@ -1,8 +1,8 @@
 --Database Setup
 CREATE TABLE menu (
     menu_item_id SMALLINT PRIMARY KEY,
-    item_name    VARCHAR(100),
-    category     VARCHAR(50),
+    item_name    VARCHAR(50),
+    category     VARCHAR(20),
     price        NUMERIC(5,2)
 )
 
@@ -28,7 +28,7 @@ select count(*) from menu
 select min(order_date) as earliest_date,
 max(order_date) as latest_date from order_details
 
---Menu Analysis
+--MENU ANALYSIS
 --How many items does each category have and what is the price range?
 select category, count(item_name),
 min(price) as lowest_price,
@@ -67,7 +67,8 @@ group by day_of_week
 order by order_volume desc
 
 --What hours of the day see the highest order volume?
-select to_char(order_time, 'HH12 PM') as time_of_day, count(item_id) as order_volume from order_details
+select to_char(order_time, 'HH12 PM') as time_of_day,
+count(item_id) as order_volume from order_details
 group by time_of_day
 order by order_volume desc
 
