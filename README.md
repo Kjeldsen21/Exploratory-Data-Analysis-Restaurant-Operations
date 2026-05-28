@@ -53,7 +53,7 @@ order_details (order_details_id, order_id, order_date, order_time, item_id)
 
 ## Tools Used
 
-`pgAdmin 4` `PostgreSQL 18`
+`pgAdmin` `PostgreSQL`
 
 
 ## Datasource
